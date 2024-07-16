@@ -32,7 +32,7 @@
     },
     {
       "matchPackagePatterns": [
-        "/[a-z]*[-_]?opentelemetry[-_]?[a-z]*/gm"
+        "opentelemetry"
       ],
       "groupName": "opentelemetry packages"
     },

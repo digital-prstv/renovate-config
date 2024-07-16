@@ -34,7 +34,8 @@
       "matchPackagePatterns": [
         "opentelemetry"
       ],
-      "groupName": "opentelemetry packages"
+      "groupName": "opentelemetry packages",
+      "schedule": "* 4 * * 4"
     },
     {
       "matchPackagePatterns": [

@@ -4,25 +4,25 @@
   "semanticCommitType": "fix",
   "packageRules": [
     {
-      "packagePatterns": [
+      "matchPackagePatterns": [
         "^futures[-_]?"
       ],
       "groupName": "futures packages"
     },
     {
-      "packagePatterns": [
+      "matchPackagePatterns": [
         "^serde[-_]?"
       ],
       "groupName": "serde packages"
     },
     {
-      "packagePatterns": [
+      "matchPackagePatterns": [
         "^tokio[-_]?"
       ],
       "groupName": "tokio packages"
     },
     {
-      "packagePatterns": [
+      "matchPackagePatterns": [
         "^tracing[-_]?"
       ],
       "excludePackageNames": [
@@ -31,13 +31,13 @@
       "groupName": "tracing packages"
     },
     {
-      "packagePatterns": [
-        "^opentelemetry[-_]?"
+      "matchPackagePatterns": [
+        "/[a-z]*[-_]?opentelemetry[-_]?[a-z]*/gm"
       ],
       "groupName": "opentelemetry packages"
     },
     {
-      "packagePatterns": [
+      "matchPackagePatterns": [
         "^liquid[-_]?",
         "^kstring$"
       ],

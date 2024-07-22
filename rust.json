@@ -39,7 +39,7 @@
     },
     {
       "matchPackagePatterns": [
-        "circleci-toolkit"
+        "jerus-org/circleci-toolkit"
       ],
       "enabled": false
     },

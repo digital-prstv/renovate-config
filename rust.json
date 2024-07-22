@@ -39,6 +39,12 @@
     },
     {
       "matchPackagePatterns": [
+        "circleci-toolkit"
+      ],
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": [
         "^liquid[-_]?",
         "^kstring$"
       ],

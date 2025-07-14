@@ -58,10 +58,12 @@
       ]
     },
     {
-      "sourceUrl": "https://circleci.com/developer/orbs/orb/digital-prstv/circleci-toolkit",
+      "sourceUrl": "https://github.com/jerus-org/circleci-toolkit",
       "enabled": true,
       "matchPackageNames": [
-        "/digital-prstv/circleci-toolkit/"
+        "/digital-prstv/circleci-toolkit/",
+        "/jerusdp/circleci-toolkit/",
+        "/jerus-org/circleci-toolkit/"
       ]
     }
   ]

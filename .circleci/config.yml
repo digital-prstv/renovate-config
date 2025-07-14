@@ -43,6 +43,9 @@ jobs:
           name: Show node version
           command: node --version
       - run:
+          name: Update node modules dry run
+          command: node update --dry-run
+      - run:
           name: Validate config - default.json
           command: |
             npx --yes --package renovate -- renovate-config-validator default.json

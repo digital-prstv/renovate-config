@@ -44,7 +44,7 @@ jobs:
           command: node --version
       - run:
           name: Update node modules dry run
-          command: node update --dry-run
+          command: npm update --dry-run
       - run:
           name: Validate config - default.json
           command: |

@@ -45,7 +45,7 @@ jobs:
       - run:
           name: Validate config - default.json
           command: |
-            npx --yes --package renovate -- renovate-config-validator default.json
+            npx --yes --package renovate -- renovate-config-validator --strict default.json
 
 workflows:
   check_last_commit:

@@ -1,4 +1,10 @@
 {
+  "dependencyDashboard": true,
+  "rangeStrategy": "bump",
+  "prHourlyLimit": 0,
+  "semanticCommits": "enabled",
+  "semanticCommitType": "fix",
+  "versioning": "cargo",
   "hostRules": [
     {
       "matchHost": "circleci.com",

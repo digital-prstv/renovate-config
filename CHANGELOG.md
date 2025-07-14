@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 👷 ci(circleci)-downgrade node version in CI configuration(pr [#15])
 - 🔧 chore(config)-update customManagers configuration(pr [#16])
 - 👷 ci(circleci)-enhance renovate config validation(pr [#17])
+- 🔧 chore(renovate)-update renovate configuration(pr [#20])
 
 ### Fixed
 
@@ -23,3 +24,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#11]: https://github.com/digital-prstv/renovate-config/pull/11
 [#17]: https://github.com/digital-prstv/renovate-config/pull/17
 [#18]: https://github.com/digital-prstv/renovate-config/pull/18
+[#20]: https://github.com/digital-prstv/renovate-config/pull/20

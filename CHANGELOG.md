@@ -10,5 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - 👷 ci(circleci)-downgrade node version in CI configuration(pr [#15])
+- 👷 ci(config)-update circleci toolkit orb source(pr [#14])
 
 [#15]: https://github.com/digital-prstv/renovate-config/pull/15
+[#14]: https://github.com/digital-prstv/renovate-config/pull/14

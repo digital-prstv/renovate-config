@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- ✨ add rebaseWhen config(pr [#32])
+
 ### Changed
 
 - 👷 ci(circleci)-downgrade node version in CI configuration(pr [#15])
@@ -45,3 +49,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#29]: https://github.com/digital-prstv/renovate-config/pull/29
 [#30]: https://github.com/digital-prstv/renovate-config/pull/30
 [#31]: https://github.com/digital-prstv/renovate-config/pull/31
+[#32]: https://github.com/digital-prstv/renovate-config/pull/32

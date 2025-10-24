@@ -2,6 +2,7 @@
   "dependencyDashboard": true,
   "rangeStrategy": "bump",
   "prHourlyLimit": 0,
+  "rebaseWhen": "never",
   "semanticCommits": "enabled",
   "semanticCommitType": "fix",
   "versioning": "cargo",

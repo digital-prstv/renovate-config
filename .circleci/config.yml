@@ -21,7 +21,7 @@ parameters:
     description: "If true, the release pipeline will be executed."
 
 orbs:
-  toolkit: digital-prstv/circleci-toolkit@2.13.5
+  toolkit: digital-prstv/circleci-toolkit@2.16.0
 
 executors:
   rust-env:
@@ -32,7 +32,7 @@ executors:
       - image: jerusdp/ci-rust:base
   node:
     docker:
-      - image: cimg/node:25.0.0
+      - image: cimg/node:24.4.0
 
 jobs:
   validate-config:
@@ -42,6 +42,14 @@ jobs:
       - run:
           name: Show node version
           command: node --version
+      - run:
+          name: Install renovate
+          command: |
+            npm install renovate
+      - run:
+          name: Update
+          command: |
+            npm update
       - run:
           name: Validate config - default.json
           command: |

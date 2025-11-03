@@ -18,7 +18,8 @@
         "docker"
       ],
       "matchPackageNames": [
-        "rust"
+        "rust",
+        "node"
       ],
       "versioning": "docker"
     },

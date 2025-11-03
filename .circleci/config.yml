@@ -45,6 +45,7 @@ jobs:
       - run:
           name: Validate config - default.json
           command: |
+            npm update 
             npx --yes --package renovate -- renovate-config-validator --strict default.json
 
 workflows:

@@ -43,6 +43,10 @@ jobs:
           name: Show node version
           command: node --version
       - run:
+          name: Install renovate
+          command: |
+            npm install renovate
+      - run:
           name: Validate config - default.json
           command: |
             npm update 

@@ -32,7 +32,7 @@ executors:
       - image: jerusdp/ci-rust:base
   node:
     docker:
-      - image: cimg/node:25.0.0
+      - image: cimg/node:25.1.0
 
 jobs:
   validate-config:

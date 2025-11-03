@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - ✨ add rebaseWhen config(pr [#32])
 - ✨ add docker datasource to rust package rule(pr [#33])
+- ✨ add node support to docker datasource(pr [#34])
 
 ### Changed
 
@@ -52,3 +53,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#31]: https://github.com/digital-prstv/renovate-config/pull/31
 [#32]: https://github.com/digital-prstv/renovate-config/pull/32
 [#33]: https://github.com/digital-prstv/renovate-config/pull/33
+[#34]: https://github.com/digital-prstv/renovate-config/pull/34

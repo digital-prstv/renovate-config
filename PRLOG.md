@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deps: update cimg/node docker tag to v24.10.0(pr [#30])
 - deps: update cimg/node docker tag to v25(pr [#31])
 - deps: update cimg/node docker tag to v24.11.1(pr [#35])
+- deps: update cimg/node docker tag to v25(pr [#36])
 
 [#15]: https://github.com/digital-prstv/renovate-config/pull/15
 [#16]: https://github.com/digital-prstv/renovate-config/pull/16
@@ -56,3 +57,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#33]: https://github.com/digital-prstv/renovate-config/pull/33
 [#34]: https://github.com/digital-prstv/renovate-config/pull/34
 [#35]: https://github.com/digital-prstv/renovate-config/pull/35
+[#36]: https://github.com/digital-prstv/renovate-config/pull/36

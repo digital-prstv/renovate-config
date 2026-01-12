@@ -1,35 +1,30 @@
 version: 2.1
 
 parameters:
-  min-rust-version:
+  min_rust_version:
     type: string
     default: "1.81"
   fingerprint:
     type: string
     default: SHA256:OkxsH8Z6Iim6WDJBaII9eTT9aaO1f3eDc6IpsgYYPVg
-  validation-flag:
+  validation_flag:
     type: boolean
     default: false
     description: "If true, the validation pipeline will be executed."
-  success-flag:
+  success_flag:
     type: boolean
     default: false
     description: "If true, the success pipeline will be executed."
-  release-flag:
+  release_flag:
     type: boolean
     default: false
     description: "If true, the release pipeline will be executed."
 
 orbs:
-  toolkit: digital-prstv/circleci-toolkit@3.2.0
+  toolkit: digital-prstv/circleci-toolkit@4.2.1
 
 executors:
-  rust-env:
-    docker:
-      - image: jerusdp/ci-rust:<<pipeline.parameters.min-rust-version>>
-  base-env:
-    docker:
-      - image: jerusdp/ci-rust:base
+  # Custom node executor for renovate validation
   node:
     docker:
       - image: cimg/node:25.2.1
@@ -61,9 +56,9 @@ workflows:
       and:
         - not:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - not: << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.release-flag >>
-        - not: << pipeline.parameters.validation-flag >>
+        - not: << pipeline.parameters.success_flag >>
+        - not: << pipeline.parameters.release_flag >>
+        - not: << pipeline.parameters.validation_flag >>
 
     jobs:
       - toolkit/choose_pipeline:
@@ -75,12 +70,12 @@ workflows:
       and:
         - not:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - not: << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.release-flag >>
-        - << pipeline.parameters.validation-flag >>
+        - not: << pipeline.parameters.success_flag >>
+        - not: << pipeline.parameters.release_flag >>
+        - << pipeline.parameters.validation_flag >>
     jobs:
       - toolkit/label:
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
           context: pcu-app
           filters:
             branches:
@@ -95,7 +90,7 @@ workflows:
             - bot-check
             - pcu-app
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>
           # update_pcu: true
           # install_me: true
           pcu_verbosity: "-vvvv"
@@ -105,9 +100,9 @@ workflows:
       and:
         - not:
             equal: [scheduled_pipeline, << pipeline.trigger_source >>]
-        - << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.validation-flag >>
-        - not: << pipeline.parameters.release-flag >>
+        - << pipeline.parameters.success_flag >>
+        - not: << pipeline.parameters.validation_flag >>
+        - not: << pipeline.parameters.release_flag >>
 
     jobs:
       - toolkit/end_success
@@ -119,14 +114,14 @@ workflows:
             - and:
                 - equal: [scheduled_pipeline, << pipeline.trigger_source >>]
                 - equal: ["release check", << pipeline.schedule.name >>]
-            - <<  pipeline.parameters.release-flag >>
-        - not: << pipeline.parameters.success-flag >>
-        - not: << pipeline.parameters.validation-flag >>
-        - <<  pipeline.parameters.release-flag >>
+            - <<  pipeline.parameters.release_flag >>
+        - not: << pipeline.parameters.success_flag >>
+        - not: << pipeline.parameters.validation_flag >>
+        - <<  pipeline.parameters.release_flag >>
     jobs:
       - toolkit/make_release:
           context:
             - release
             - bot-check
           ssh_fingerprint: << pipeline.parameters.fingerprint >>
-          min_rust_version: << pipeline.parameters.min-rust-version >>
+          min_rust_version: << pipeline.parameters.min_rust_version >>

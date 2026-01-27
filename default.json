@@ -25,11 +25,6 @@
       "pinDigests": true
     },
     {
-      "matchPackageNames": [
-        "!jerusdp/ci-rust"
-      ]
-    },
-    {
       "groupName": "futures packages",
       "matchPackageNames": [
         "/^futures[-_]?/"

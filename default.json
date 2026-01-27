@@ -21,7 +21,8 @@
         "rust",
         "node"
       ],
-      "versioning": "docker"
+      "versioning": "docker",
+      "pinDigests": true
     },
     {
       "matchPackageNames": [

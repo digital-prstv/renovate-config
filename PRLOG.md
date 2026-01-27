@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ✨ add docker datasource to rust package rule(pr [#33])
 - ✨ add node support to docker datasource(pr [#34])
 - BREAKING: migrate to circleci-toolkit v4.2.1(pr [#39])
+- ✨ enable pinning of digests in config(pr [#41])
 
 ### Changed
 
@@ -64,3 +65,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#38]: https://github.com/digital-prstv/renovate-config/pull/38
 [#39]: https://github.com/digital-prstv/renovate-config/pull/39
 [#40]: https://github.com/digital-prstv/renovate-config/pull/40
+[#41]: https://github.com/digital-prstv/renovate-config/pull/41

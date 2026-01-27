@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 🔧 chore(config)-update circleci toolkit source URL(pr [#23])
 - 🔧 chore(config)-update CircleCI toolkit source URL(pr [#24])
 - chore-rename CHANGELOG.md to PRLOG.md(pr [#26])
+- ♻️ refactor(config)-remove redundant package matching rule(pr [#42])
 
 ### Fixed
 
@@ -66,3 +67,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#39]: https://github.com/digital-prstv/renovate-config/pull/39
 [#40]: https://github.com/digital-prstv/renovate-config/pull/40
 [#41]: https://github.com/digital-prstv/renovate-config/pull/41
+[#42]: https://github.com/digital-prstv/renovate-config/pull/42

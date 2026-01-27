@@ -31,20 +31,6 @@
       ]
     },
     {
-      "description": "Enable Docker digest tracking for ci-rust images in executors",
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchPackageNames": [
-        "jerusdp/ci-rust"
-      ],
-      "matchFileNames": [
-        "src/executors//.yml"
-      ],
-      "enabled": true,
-      "pinDigests": true
-    },
-    {
       "groupName": "serde packages",
       "matchPackageNames": [
         "/^serde[-_]?/"

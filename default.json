@@ -39,7 +39,7 @@
         "jerusdp/ci-rust"
       ],
       "matchFileNames": [
-        "src/executors/**/*.yml"
+        "src/executors//.yml"
       ],
       "enabled": true,
       "pinDigests": true

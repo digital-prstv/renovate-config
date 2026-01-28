@@ -1,7 +1,8 @@
 {
     "dockerfile": {
         "managerFilePatterns": [
-            "/(^|/)(src/executor/.+\\.yml$/"
+            "/^src/executor/*\\.yml$/",
+            "/^src/executor/*\\.yaml$/"
         ]
     }
 }

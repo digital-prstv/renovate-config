@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ♻️ refactor(ci)-simplify ciContainerDigest.json structure(pr [#47])
 - 🔧 chore(config)-add package to matchPackageNames(pr [#48])
 - 🔧 chore(ci)-update manager file patterns in ciContainerDigest(pr [#50])
+- 🔧 chore(ci)-update yaml file pattern in container digest(pr [#51])
 
 ### Fixed
 
@@ -82,3 +83,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#48]: https://github.com/digital-prstv/renovate-config/pull/48
 [#49]: https://github.com/digital-prstv/renovate-config/pull/49
 [#50]: https://github.com/digital-prstv/renovate-config/pull/50
+[#51]: https://github.com/digital-prstv/renovate-config/pull/51

@@ -32,6 +32,13 @@
       ]
     },
     {
+      "groupName": "test tools",
+      "matchPackageNames": [
+        "/^trycmd/",
+        "/^snapbox/"
+      ]
+    },
+    {
       "groupName": "serde packages",
       "matchPackageNames": [
         "/^serde[-_]?/"

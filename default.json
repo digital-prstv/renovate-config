@@ -32,7 +32,7 @@
       ]
     },
     {
-      "groupName": "test tools",
+      "groupName": "cli test tools",
       "matchPackageNames": [
         "/^trycmd/",
         "/^snapbox/"

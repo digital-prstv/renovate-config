@@ -21,7 +21,7 @@ parameters:
     description: "If true, the release pipeline will be executed."
 
 orbs:
-  toolkit: digital-prstv/circleci-toolkit@4.2.1
+  toolkit: digital-prstv/circleci-toolkit@4.4.3
 
 executors:
   # Custom node executor for renovate validation

@@ -50,6 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - deps: update cimg/node docker tag to v25.4.0(pr [#40])
 - 🐛 config: correct file path in matchFileNames(pr [#44])
 - 🐛 ci: correct regex pattern in ciContainerDigest.json(pr [#49])
+- deps: update dependency toolkit to v4.4.3(pr [#55])
 
 [#15]: https://github.com/digital-prstv/renovate-config/pull/15
 [#16]: https://github.com/digital-prstv/renovate-config/pull/16
@@ -86,3 +87,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#50]: https://github.com/digital-prstv/renovate-config/pull/50
 [#51]: https://github.com/digital-prstv/renovate-config/pull/51
 [#53]: https://github.com/digital-prstv/renovate-config/pull/53
+[#55]: https://github.com/digital-prstv/renovate-config/pull/55

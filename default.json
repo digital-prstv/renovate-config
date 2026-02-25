@@ -23,7 +23,8 @@
         "node"
       ],
       "versioning": "docker",
-      "pinDigests": true
+      "pinDigests": true,
+      "groupName": "pinned containers"
     },
     {
       "groupName": "futures packages",

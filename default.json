@@ -52,6 +52,13 @@
       ]
     },
     {
+      "groupName": "opentelemetry packages",
+      "matchPackageNames": [
+        "/^opentelemetry[-_]?/",
+        "tracing-opentelemetry"
+      ]
+    },
+    {
       "groupName": "tracing packages",
       "matchPackageNames": [
         "/^tracing[-_]?/",

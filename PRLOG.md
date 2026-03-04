@@ -34,6 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 🔧 chore(ci)-update yaml file pattern in container digest(pr [#51])
 - 🔧 chore(config)-update test tools group name in package configuration(pr [#53])
 - 🔧 chore(config)-add group name for pinned containers(pr [#56])
+- 🔧 chore(config)-add opentelemetry package group(pr [#57])
 
 ### Fixed
 
@@ -92,3 +93,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#55]: https://github.com/digital-prstv/renovate-config/pull/55
 [#54]: https://github.com/digital-prstv/renovate-config/pull/54
 [#56]: https://github.com/digital-prstv/renovate-config/pull/56
+[#57]: https://github.com/digital-prstv/renovate-config/pull/57

@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - BREAKING: migrate to circleci-toolkit v4.2.1(pr [#39])
 - ✨ enable pinning of digests in config(pr [#41])
 - ✨ enable Docker digest tracking for ci-rust(pr [#43])
+- group rand packages(pr [#58])
 
 ### Changed
 
@@ -94,3 +95,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [#54]: https://github.com/digital-prstv/renovate-config/pull/54
 [#56]: https://github.com/digital-prstv/renovate-config/pull/56
 [#57]: https://github.com/digital-prstv/renovate-config/pull/57
+[#58]: https://github.com/digital-prstv/renovate-config/pull/58

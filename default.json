@@ -27,6 +27,12 @@
       "groupName": "pinned containers"
     },
     {
+      "groupName": "rand packages",
+      "matchPackageNames": [
+        "/^rand[-_]?/"
+      ]
+    },
+    {
       "groupName": "futures packages",
       "matchPackageNames": [
         "/^futures[-_]?/"

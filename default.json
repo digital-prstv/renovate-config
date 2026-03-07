@@ -72,6 +72,12 @@
       ]
     },
     {
+      "groupName": "wasm-bindgen packages",
+      "matchPackageNames": [
+        "/^wasm-bindgen[-_]?/"
+      ]
+    },
+    {
       "groupName": "liquid packages",
       "matchPackageNames": [
         "/^liquid[-_]?/",

@@ -6,7 +6,7 @@ orbs:
 executors:
   node:
     docker:
-      - image: cimg/node:25.6.1
+      - image: cimg/node:25.8.1
 
 jobs:
   validate-config:

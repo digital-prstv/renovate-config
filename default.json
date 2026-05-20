@@ -27,6 +27,12 @@
       "groupName": "pinned containers"
     },
     {
+      "groupName": "git2 packages",
+      "matchPackageNames": [
+        "/^git2[-_]?/"
+      ]
+    },
+    {
       "groupName": "rand packages",
       "matchPackageNames": [
         "/^rand[-_]?/"

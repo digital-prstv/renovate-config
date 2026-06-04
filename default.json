@@ -33,6 +33,12 @@
       ]
     },
     {
+      "groupName": "hashicorp terraform",
+      "matchPackageNames": [
+        "/^hashicorp/"
+      ]
+    },
+    {
       "groupName": "rand packages",
       "matchPackageNames": [
         "/^rand[-_]?/"

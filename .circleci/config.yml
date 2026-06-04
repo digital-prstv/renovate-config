@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  toolkit: digital-prstv/circleci-toolkit@6.2.0
-
 executors:
   node:
     docker:

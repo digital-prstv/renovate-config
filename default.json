@@ -6,6 +6,11 @@
   "semanticCommits": "enabled",
   "semanticCommitType": "fix",
   "versioning": "cargo",
+  "circleci": {
+    "fileMatch": [
+      "/(^|/)@orb\\.yml$/"
+    ]
+  },
   "hostRules": [
     {
       "matchHost": "circleci.com",

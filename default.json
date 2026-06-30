@@ -78,7 +78,7 @@
       "groupName": "opentelemetry packages",
       "matchPackageNames": [
         "/^opentelemetry[-_]?/",
-	"opentelemetry_sdk",
+        "opentelemetry_sdk",
         "tracing-opentelemetry"
       ]
     },

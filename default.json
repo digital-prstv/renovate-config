@@ -6,6 +6,11 @@
   "lockFileMaintenance": {
     "enabled": true
   },
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": []
+  },
   "semanticCommits": "enabled",
   "semanticCommitType": "fix",
   "versioning": "cargo",

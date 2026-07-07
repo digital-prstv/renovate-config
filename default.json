@@ -3,6 +3,9 @@
   "rangeStrategy": "bump",
   "prHourlyLimit": 0,
   "rebaseWhen": "never",
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "semanticCommits": "enabled",
   "semanticCommitType": "fix",
   "versioning": "cargo",

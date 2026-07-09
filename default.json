@@ -7,6 +7,11 @@
     "enabled": true,
     "schedule": ["before 4am on tuesday"]
   },
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": []
+  },
   "semanticCommits": "enabled",
   "semanticCommitType": "fix",
   "versioning": "cargo",

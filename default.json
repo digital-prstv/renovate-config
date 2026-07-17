@@ -41,6 +41,16 @@
       "groupName": "pinned containers"
     },
     {
+      "description": "orb/Dockerfile is a gen-circleci-orb artifact. Its image digests are pinned in gen-circleci-orb.toml ([orb].base_image / builder_image) and re-emitted on every regeneration, which strips any digest written directly into the Dockerfile. Disable the dockerfile manager there so the toml stays the single source of truth. Inert in repos with no orb/Dockerfile.",
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchFileNames": [
+        "orb/Dockerfile"
+      ],
+      "enabled": false
+    },
+    {
       "groupName": "git2 packages",
       "matchPackageNames": [
         "/^git2[-_]?/"
@@ -127,6 +137,65 @@
         "/jerusdp/circleci-toolkit/",
         "/jerus-org/circleci-toolkit/"
       ]
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Track the pinned Rust builder image digest in gen-circleci-orb.toml ([orb].builder_image)",
+      "managerFilePatterns": [
+        "/^gen-circleci-orb\\.toml$/"
+      ],
+      "matchStrings": [
+        "builder_image\\s*=\\s*\"(?<depName>[^:\"]+):(?<currentValue>[^@\"]+)@(?<currentDigest>sha256:[a-f0-9]+)\""
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Track the pinned Rust runtime base image digest in gen-circleci-orb.toml ([orb].base_image)",
+      "managerFilePatterns": [
+        "/^gen-circleci-orb\\.toml$/"
+      ],
+      "matchStrings": [
+        "base_image\\s*=\\s*\"(?<depName>[^:\"]+):(?<currentValue>[^@\"]+)@(?<currentDigest>sha256:[a-f0-9]+)\""
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Track the pinned build image digest in gen-circleci-orb.toml ([ci].rust_image). gen-circleci-orb copies this value into the generated CircleCI config, so it MUST move in lockstep with the .circleci manager below or 'gen-circleci-orb update --check' fails on the drift.",
+      "managerFilePatterns": [
+        "/^gen-circleci-orb\\.toml$/"
+      ],
+      "matchStrings": [
+        "rust_image\\s*=\\s*\"(?<depName>[^:\"]+):(?<currentValue>[^@\"]+)@(?<currentDigest>sha256:[a-f0-9]+)\""
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Track the pinned build image digest emitted into the CircleCI config. Unlike orb/Dockerfile, CircleCI reads this file from the commit so it cannot be regenerated at run time — the digest is committed and must be updated here too. Both this and the gen-circleci-orb.toml manager above resolve to the same image, so the 'pinned containers' group updates them in one PR.",
+      "managerFilePatterns": [
+        "/^\\.circleci/.+\\.ya?ml$/"
+      ],
+      "matchStrings": [
+        "rust_image:\\s*(?<depName>[^:\\s]+):(?<currentValue>[^@\\s]+)@(?<currentDigest>sha256:[a-f0-9]+)"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "customType": "regex",
+      "description": "Track the pinned circleci-cli version in gen-circleci-orb.toml ([orb].circleci_cli_version)",
+      "managerFilePatterns": [
+        "/^gen-circleci-orb\\.toml$/"
+      ],
+      "matchStrings": [
+        "circleci_cli_version\\s*=\\s*\"(?<currentValue>[^\"]+)\""
+      ],
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "CircleCI-Public/circleci-cli",
+      "extractVersionTemplate": "^v(?<version>.+)$"
     }
   ]
 }

@@ -1,30 +1,27 @@
 version: 2.1
 
 executors:
-  node:
+  # The tool author's own image ships renovate-config-validator on the node
+  # version renovate declares in `engines`, so the two cannot drift apart.
+  # Renovate tracks this tag, and each bump is validated by the version it
+  # introduces. Do not swap this for a bare node image plus `npm install
+  # renovate`: npm resolves backwards to a release whose engines accept the
+  # image's node, ageing the validator silently instead of failing.
+  renovate:
     docker:
-      - image: cimg/node:26.4.0
+      - image: ghcr.io/renovatebot/renovate:43.265.4
 
 jobs:
   validate-config:
-    executor: node
+    executor: renovate
     steps:
       - checkout
       - run:
-          name: Show node version
-          command: node --version
-      - run:
-          name: Install renovate
-          command: |
-            npm install renovate
-      - run:
-          name: Update
-          command: |
-            npm update
+          name: Show validator version
+          command: renovate-config-validator --version
       - run:
           name: Validate config - default.json
-          command: |
-            npx --yes --package renovate -- renovate-config-validator --strict default.json
+          command: renovate-config-validator --strict default.json
 
 workflows:
   validation:

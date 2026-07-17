@@ -16,7 +16,7 @@
   "semanticCommitType": "fix",
   "versioning": "cargo",
   "circleci": {
-    "fileMatch": [
+    "managerFilePatterns": [
       "/(^|/)@orb\\.yml$/"
     ]
   },

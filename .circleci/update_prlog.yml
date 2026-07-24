@@ -9,7 +9,7 @@ parameters:
     description: "If true, pcu is updated from its main github branch before running."
 
 orbs:
-  toolkit: digital-prstv/circleci-toolkit@6.5.0
+  toolkit: digital-prstv/circleci-toolkit@6.6.2
 
 workflows:
   update_prlog:
@@ -24,7 +24,3 @@ workflows:
           pcu_from_merge: --from-merge
           update_pcu: << pipeline.parameters.update_pcu >>
           pcu_verbosity: "-vvvv"
-      - toolkit/label:
-          context: pcu-app
-          requires:
-            - update-prlog-on-main

@@ -41,6 +41,13 @@
       "groupName": "pinned containers"
     },
     {
+      "description": "CircleCI-Public/circleci-cli's release tags (v1.0.50568, ...) are a monotonically increasing build counter, not real semver -- the third segment carries no patch/compat meaning, and the historical 0.x -> 1.x relabel wasn't a semver-meaningful breaking change either. Tracked via the circleci_cli_version customManager below (rangeStrategy stays the global 'bump', needed to update a bare pinned TOML string at all -- see the NuGet bare-version precedent in Renovate's own docs). Inheriting the repo-wide 'cargo'/semver versioning here made Renovate treat that 0.x -> 1.x transition as a semver major crossing and propose a nonexistent '1.0.0' floor instead of the real latest tag (gen-circleci-orb#326/#328) -- 'loose' just orders the dotted numbers, with none of semver's pre-1.0/major-boundary semantics.",
+      "matchDepNames": [
+        "CircleCI-Public/circleci-cli"
+      ],
+      "versioning": "loose"
+    },
+    {
       "description": "orb/Dockerfile is a gen-circleci-orb artifact. Its image digests are pinned in gen-circleci-orb.toml ([orb].base_image / builder_image) and re-emitted on every regeneration, which strips any digest written directly into the Dockerfile. Disable the dockerfile manager there so the toml stays the single source of truth. Inert in repos with no orb/Dockerfile.",
       "matchManagers": [
         "dockerfile"

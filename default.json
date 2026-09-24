@@ -5,7 +5,8 @@
   "rebaseWhen": "never",
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 4am on tuesday"]
+    "automerge": true,
+    "schedule": ["before 2am on tuesday"]
   },
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {

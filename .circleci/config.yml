@@ -9,7 +9,7 @@ executors:
   # image's node, ageing the validator silently instead of failing.
   renovate:
     docker:
-      - image: ghcr.io/renovatebot/renovate:43.279.0
+      - image: ghcr.io/renovatebot/renovate:44.181.1
 
 jobs:
   validate-config:

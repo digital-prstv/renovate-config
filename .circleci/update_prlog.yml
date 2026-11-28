@@ -9,7 +9,7 @@ parameters:
     description: "If true, pcu is updated from its main github branch before running."
 
 orbs:
-  toolkit: digital-prstv/circleci-toolkit@8.0.3
+  toolkit: digital-prstv/circleci-toolkit@8.1.0
 
 workflows:
   update_prlog:

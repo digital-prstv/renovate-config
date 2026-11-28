@@ -1,5 +1,7 @@
 {
-  "dependencyDashboard": true,
+  "dependencyDashboard": {
+	  "enabled": true
+  },
   "rangeStrategy": "bump",
   "prHourlyLimit": 0,
   "rebaseWhen": "never",
